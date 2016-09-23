@@ -1,0 +1,24 @@
+# Key-bindings for the command-line editor.
+
+# none, visible or audible
+set bell-style none
+
+# Ask before displaying >20 items
+set completion-query-items 20
+
+# Ignore case for the command-line-completion functionality
+set completion-ignore-case on
+
+# Show all instead of beeping first
+set show-all-if-ambiguous on
+
+# MSYSTEM is emacs based --> mode=emacs
+# Use 'sed -n l<enter>' to display keycodes
+# 'bind -p' shows keyb bindings
+$if mode=emacs
+  "\e'":         "`"
+  "\e\303\254":  "~"
+  "\e[1;5F":     kill-line
+  "\e[1;5H":     backward-kill-line
+  "\e[24~":      re-read-init-file     # F12
+$endif
