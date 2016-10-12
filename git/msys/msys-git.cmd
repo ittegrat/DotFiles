@@ -21,6 +21,6 @@ set MSYS2_ARG_CONV_EXCL=-Fd;-Fo
 
 :GitOnly
 set GitRoot=%~dp0PortableGit
-set HOME=%GitRoot%\home
+set HOME=%USERPROFILE%\home
 ::start /b %GitRoot%\git-bash.exe --cd-to-home
 start %GitRoot%\git-bash.exe --cd-to-home
