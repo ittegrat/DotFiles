@@ -6,8 +6,9 @@ if [%1]==[] goto GitOnly
 if [%1]==[x86] set PDG_ADDRESS_MODEL=x86
 if [%1]==[amd64] set PDG_ADDRESS_MODEL=amd64
 
-if [%2]==[9] set VS_VER=9
-if [%2]==[11] set VS_VER=11
+if [%2]==[vs2008] set VS_VER=9
+if [%2]==[vs2012] set VS_VER=11
+if [%2]==[vs2015] set VS_VER=14
 
 set PDG_COMPILER_VERSION=vc%VS_VER%
 
