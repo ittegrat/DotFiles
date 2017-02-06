@@ -11,9 +11,9 @@
   2. if *home* is created elsewhere, adjust `msys-git.cmd`
   3. copy dotfiles to home
   4. exec git config (~/bin/git-post-install.sh):
-    + `git config --global core.autocrlf false`
     + `git config --global user.name ...`
     + `git config --global user.email ...`
+    + `git config --global core.safecrlf true`
   5. possibly add:
     + windows links (symbolic or junction ??)
     + lines to /etc/fstab `C:/path/to/... /... ntfs binary,posix=0,noacl,user 0 0`
