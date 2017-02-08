@@ -16,9 +16,9 @@ set show-all-if-ambiguous on
 # Use 'sed -n l<enter>' to display keycodes
 # 'bind -p' shows keyb bindings
 $if mode=emacs
-  "\e'":         "`"
-  "\e\303\254":  "~"
-  "\e[1;5F":     kill-line
-  "\e[1;5H":     backward-kill-line
-  "\e[24~":      re-read-init-file     # F12
+  "\e'":          "`"                   # ESC + ' / AltGr + '
+  "\e\303\254":   "~"                   # ESC + ì / AltGr + ì
+  "\e[1;5F":      kill-line             # CTRL + END
+  "\e[1;5H":      backward-kill-line    # CTRL + HOME
+  "\e[24~":       re-read-init-file     # F12
 $endif
