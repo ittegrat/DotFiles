@@ -3,7 +3,7 @@
   1. Rename old installl folder
   2. disable doskey before install (place `goto :eof` at beginning of autorun)
   3. exec PortableGit-x.xx.xx-64-bit.7z.exe
-  4. extract [make](https://sourceforge.net/projects/msys2/files/REPOS/MSYS2/x86_64/) to /usr/bin
+  4. extract [make](http://repo.msys2.org/msys/x86_64/) to /usr/bin
   5. install filedep
 
 ## First time install
@@ -19,4 +19,4 @@
     + lines to /etc/fstab `C:/path/to/... /... ntfs binary,posix=0,noacl,user 0 0`
 
 ## MSYS Notes
-MSYS2_ARG_CONV_EXCL to preserve paths in make (cfr. [Filesystem namespaces](http://sourceforge.net/p/msys2/wiki/Porting/))
+MSYS2_ARG_CONV_EXCL to preserve paths in make (cfr. [Filesystem namespaces](https://github.com/msys2/msys2/wiki/Porting))
