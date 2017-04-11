@@ -1,0 +1,12 @@
+[user]
+	name = www
+	email = xxx@yyy.zz
+[core]
+	safecrlf = true
+[sendpack]
+	sideband = false
+[alias]
+	alias = config --get-regexp '^alias\\.'
+	github = !(git config user.name ittegrat && git config user.email ittegrat@users.noreply.github.com)
+	meld = merge --no-commit --no-ff
+	sstatus = !(git status && git submodule foreach git status)
