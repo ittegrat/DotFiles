@@ -16,7 +16,7 @@
     + `git config --global core.safecrlf true`
   5. possibly add:
     + windows links (symbolic or junction ??)
-    + lines to /etc/fstab `C:/path/to/... /... ntfs binary,posix=0,noacl,user 0 0`
+    + lines to /etc/fstab `C:/... /... ntfs binary,posix=0,noacl,user 0 0`
 
 ## MSYS Notes
-MSYS2_ARG_CONV_EXCL to preserve paths in make (cfr. [Filesystem namespaces](https://github.com/msys2/msys2/wiki/Porting))
+MSYS2_ARG_CONV_EXCL (a `;` separated list of prefixes for which the translation is inhibited) to preserve paths in make (cfr. [Filesystem namespaces](https://github.com/msys2/msys2/wiki/Porting))
