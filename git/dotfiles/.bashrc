@@ -13,14 +13,17 @@ PS1="$PS1"'\[\033[0;33m\]`__git_ps1 | cut -c 2-`'  # Git Prompt in Brown
 PS1="$PS1"'\[\033[1;32m\]:\w# '                    # current working directory and prompt (always #) in Light Green
 export PS1                                         # Export prompt definition in sub-shells
 
-alias gitgui=/mingw64/libexec/git-core/git-gui
+alias gitgui='/mingw64/libexec/git-core/git-gui'
+alias gitui='gitk --date-order --all'
 
 alias cvsstat='cvs status 2> /dev/null | grep "File:" | grep -v "Up-to-date"'
 alias cvsq='cvs -n update -d -P 2> /dev/null'
 
 alias dev='cd /c/Development'
-alias pdg='cd /c/Development/PDG_Projects/pdglib_devel/pdglib'
-alias xll='cd /c/Development/PDG_Projects/pdglib_devel/Win32Interfaces/PDGLib'
+alias ql='dev && cd QL_Projects'
+alias pd='dev && cd PDG_Projects/pdglib_devel'
+alias pl='pd && cd pdglib'
+alias xl='pd && cd Win32Interfaces/PDGLib'
 
 if [ -n "${VCINSTALLDIR}" ] ; then
   alias dbg='PDG_TARGET_TYPE=debug'

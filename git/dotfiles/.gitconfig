@@ -9,4 +9,6 @@
 	alias = config --get-regexp '^alias\\.'
 	github = !(git config user.name ittegrat && git config user.email ittegrat@users.noreply.github.com)
 	meld = merge --no-commit --no-ff
+	wdiff = difftool -x C:/Programs/WinMerge/WinMergeU
 	sstatus = !(git status && git submodule foreach git status)
+	s = !(git diff --name-status && git submodule foreach git diff --name-status)
