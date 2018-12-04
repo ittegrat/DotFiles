@@ -16,10 +16,11 @@ export PS1                                         # Export prompt definition in
 alias gitgui='/mingw64/libexec/git-core/git-gui'
 alias gitui='gitk --date-order --all'
 
-alias cvsstat='cvs status 2> /dev/null | grep "File:" | grep -v "Up-to-date"'
-alias cvsq='cvs -n update -d -P 2> /dev/null'
+#alias cvsstat='cvs status 2> /dev/null | grep "File:" | grep -v "Up-to-date"'
+#alias cvsq='cvs -n update -d -P 2> /dev/null'
 
 alias dev='cd /c/Development'
+alias net='dev && cd NET_Projects'
 alias ql='dev && cd QL_Projects'
 alias pd='dev && cd PDG_Projects/pdglib_devel'
 alias pl='pd && cd pdglib'

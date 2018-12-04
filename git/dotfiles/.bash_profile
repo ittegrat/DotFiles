@@ -14,7 +14,7 @@ if [ -n "${VCINSTALLDIR}" ] ; then
 fi
 
 function proxyon(){
-  export HTTP_PROXY="http://127.0.0.1:8998"
+  export HTTP_PROXY="http://localhost:8998"
   export HTTPS_PROXY=${HTTP_PROXY} FTP_PROXY=${HTTP_PROXY}
 
   # optional for debugging
