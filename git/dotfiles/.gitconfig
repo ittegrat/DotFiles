@@ -12,3 +12,4 @@
 	wdiff = difftool -x C:/Programs/WinMerge/WinMergeU
 	sstatus = !(git status && git submodule foreach git status)
 	s = !(git diff --name-status && git submodule foreach git diff --name-status)
+	tagcommit = rev-list -n 1
