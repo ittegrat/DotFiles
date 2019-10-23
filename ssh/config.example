@@ -1,0 +1,17 @@
+Host myalias
+  HostName myhost.mydomain
+  User myuser
+  IdentityFile ~/.ssh/myuser
+
+Host myalias2
+  HostName myhost2.mydomain
+  Port 00000
+  User myuser2
+  IdentityFile ~/.ssh/myuser2
+
+Host github.com
+  HostName ssh.github.com
+  Port 443
+  User git
+  IdentityFile ~/.ssh/my_github_identity
+  ProxyCommand /mingw64/bin/connect.exe -H myproxy:8080 %h %p
