@@ -21,8 +21,9 @@ alias gitui='gitk --date-order --all'
 
 alias dev='cd /c/Development'
 alias net='dev && cd NET_Projects'
+alias pdg='dev && cd PDG_Projects'
 alias ql='dev && cd QL_Projects'
-alias pd='dev && cd PDG_Projects/pdglib_devel'
+alias pd='pdg && cd pdglib_devel'
 alias pl='pd && cd pdglib'
 alias xl='pd && cd Win32Interfaces/PDGLib'
 
