@@ -2,6 +2,13 @@ Font=Consolas
 ClipShortcuts=no
 CtrlShiftShortcuts=yes
 Columns=110
+Y=1
+### 2560x1440
+X=1760
 Rows=68
-X=2690
-Y=4
+### 3840x2160
+#X=2690
+#Rows=68
+### ???
+#X=1
+#Rows=50
