@@ -1,0 +1,12 @@
+# Manual page: http://mintty.github.io/mintty.1.html
+# Homepage. http://mintty.github.io
+ClipShortcuts=no
+CtrlShiftShortcuts=yes
+Columns=100
+Y=1
+### 2560x1440
+X=1832
+Rows=70
+### ???
+#X=780
+#Rows=50
