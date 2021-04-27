@@ -13,8 +13,20 @@ if [ -n "${VCINSTALLDIR}" ] ; then
   export PDG_TARGET_TYPE=debug
 fi
 
-function proxyon(){
-  export HTTP_PROXY="http://localhost:8998"
+function proxyon() {
+
+  if [ -z "$1" ] ; then
+    proxy_host=localhost
+  else
+    proxy_host=$1
+  fi
+  if [ -z "$2" ] ; then
+    proxy_port=8998
+  else
+    proxy_port=$2
+  fi
+
+  export HTTP_PROXY="http://${proxy_host}:${proxy_port}"
   export HTTPS_PROXY=${HTTP_PROXY} FTP_PROXY=${HTTP_PROXY}
 
   # optional for debugging
@@ -24,7 +36,7 @@ function proxyon(){
   env | grep -e _PROXY -e GIT_ | sort
 }
 
-function proxyoff(){
+function proxyoff() {
   variables=("HTTP_PROXY" "HTTPS_PROXY" "FTP_PROXY")
 
   for i in "${variables[@]}"; do unset $i; done
