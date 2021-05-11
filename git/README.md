@@ -1,13 +1,14 @@
 # Setup
 ## Upgrade
-  1. Download PortableGit from [github/git-for-windows](https://github.com/git-for-windows/git/releases)
-  2. Rename old installl folder
-  3. disable doskey before install (place `goto :eof` at beginning of autorun)
+  1. get PortableGit from [github/git-for-windows](https://github.com/git-for-windows/git/releases)
+  2. rename old install folder
+  3. **[OBSOLETE]** disable doskey before install (place `goto :eof` at beginning of autorun)
   4. exec PortableGit-x.xx.xx-64-bit.7z.exe
   5. if the SFX installer fails (i.e. the PortableGit folder still contains `post-install.bat`)
      open a cmd and exec `git-bash.exe --no-needs-console --hide --no-cd --command=post-install.bat`
      (cfr. `post-install.bat` for details)
-  6. extract [make](http://repo.msys2.org/msys/x86_64/) to /usr/bin
+  6. get [make-4.3-1](http://repo.msys2.org/msys/x86_64/make-4.3-1-x86_64.pkg.tar.xz) or newer from the [msys2 package repo](http://repo.msys2.org/msys/x86_64/) 
+  6. extract it to /usr/bin
   7. install filedep
 
 ## First time install
