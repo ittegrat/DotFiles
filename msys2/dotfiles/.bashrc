@@ -20,11 +20,14 @@ alias gitui='gitk --date-order --all'
 #alias cvsq='cvs -n update -d -P 2> /dev/null'
 
 alias dev='cd /c/Development'
+alias cpp='dev && cd CPP_Projects'
 alias net='dev && cd NET_Projects'
-alias pdg='dev && cd PDG_Projects'
-alias ql='dev && cd QL_Projects'
-alias pl='pdg && cd pdglib_devel/pdglib'
-alias xl='pl && cd interfaces/library/pdg/excel'
+if [ ${COMPUTERNAME} = B10FINW043E ] ; then
+  alias pdg='dev && cd PDG_Projects'
+  alias ql='dev && cd QL_Projects'
+  alias pl='pdg && cd pdglib_devel/pdglib'
+  alias xl='pl && cd interfaces/library/pdg/excel'
+fi
 
 if [ -n "${VCINSTALLDIR}" ] ; then
   alias dbg='PDG_TARGET_TYPE=debug'
