@@ -13,7 +13,7 @@ PS1="$PS1"'\[\033[0;33m\]`__git_ps1 | cut -c 2-`'  # Git Prompt in Brown
 PS1="$PS1"'\[\033[1;32m\]:\w# '                    # current working directory and prompt (always #) in Light Green
 export PS1                                         # Export prompt definition in sub-shells
 
-alias gitgui='/mingw64/libexec/git-core/git-gui'
+#alias gitgui='/mingw64/libexec/git-core/git-gui'
 alias gitui='gitk --date-order --all'
 
 #alias cvsstat='cvs status 2> /dev/null | grep "File:" | grep -v "Up-to-date"'
