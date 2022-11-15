@@ -23,9 +23,8 @@ alias dev='cd /c/Development'
 alias net='dev && cd NET_Projects'
 alias pdg='dev && cd PDG_Projects'
 alias ql='dev && cd QL_Projects'
-alias pd='pdg && cd pdglib_devel'
-alias pl='pd && cd pdglib'
-alias xl='pd && cd Win32Interfaces/PDGLib'
+alias pl='pdg && cd pdglib_devel/pdglib'
+alias xl='pl && cd interfaces/library/pdg/excel'
 
 if [ -n "${VCINSTALLDIR}" ] ; then
   alias dbg='PDG_TARGET_TYPE=debug'
