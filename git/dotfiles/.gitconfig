@@ -15,3 +15,5 @@
 	tagcommit = rev-list -n 1
 [pull]
 	ff = only
+[init]
+	defaultBranch = master
