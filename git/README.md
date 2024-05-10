@@ -7,7 +7,7 @@
   5. if the SFX installer fails (i.e. the PortableGit folder still contains `post-install.bat`)
      open a cmd and exec `git-bash.exe --no-needs-console --hide --no-cd --command=post-install.bat`
      (cfr. `post-install.bat` for details)
-  6. get [make-4.4.1-1](https://repo.msys2.org/msys/x86_64/make-4.4.1-1-x86_64.pkg.tar.zst) or newer from the [msys2 package repo](http://repo.msys2.org/msys/x86_64/) 
+  6. get [make-4.4.1-2](https://repo.msys2.org/msys/x86_64/make-4.4.1-2-x86_64.pkg.tar.zst) or newer from the [msys2 package repo](http://repo.msys2.org/msys/x86_64/) 
   6. extract it to /usr/bin
   7. install filedep
 
