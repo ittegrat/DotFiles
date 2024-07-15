@@ -3,12 +3,12 @@ ClipShortcuts=no
 CtrlShiftShortcuts=yes
 Columns=100
 Y=1
+### 3840x2160
+X=2690
+Rows=68
+### 1366x768
+X=639
+Rows=50
 ### 2560x1440
 X=1830
 Rows=70
-### 3840x2160
-#X=2690
-#Rows=68
-### ???
-#X=1
-#Rows=50

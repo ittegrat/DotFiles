@@ -17,3 +17,9 @@
 	ff = only
 [init]
 	defaultBranch = master
+[merge]
+	guitool = winmerge
+[mergetool]
+	guiDefault = true
+[mergetool "winmerge"]
+	path = C:/Programs/WinMerge/WinMergeU
