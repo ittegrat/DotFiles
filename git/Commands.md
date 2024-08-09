@@ -8,3 +8,6 @@
 
 ### Reset Author
 git rebase -r [--root] --exec "git commit --amend --no-edit --reset-author" <hash>
+
+### Debug ssh connection
+GIT_SSH_COMMAND="ssh -v" git ...
