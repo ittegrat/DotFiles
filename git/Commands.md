@@ -9,5 +9,11 @@
 ### Reset Author
 git rebase -r [--root] --exec "git commit --amend --no-edit --reset-author" <hash>
 
-### Debug ssh connection
-GIT_SSH_COMMAND="ssh -v" git ...
+### Annotated vs lightweight tags
+Annotated -> tag / light -> commit: git for-each-ref refs/tags
+
+### Debugging
+see also [Environment Variables](https://git-scm.com/book/en/v2/Git-Internals-Environment-Variables)
+ - ssh connection: GIT_SSH_COMMAND="ssh -v" git ...
+ - http connection: GIT_CURL_VERBOSE=true git ...
+ - GIT_TRACE=2 git ...
