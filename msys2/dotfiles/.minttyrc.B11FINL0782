@@ -1,5 +1,7 @@
 # Manual page: http://mintty.github.io/mintty.1.html
 # Homepage. http://mintty.github.io
+Font=Consolas
+FontHeight=10
 ClipShortcuts=no
 CtrlShiftShortcuts=yes
 Columns=100
@@ -9,4 +11,4 @@ X=1832
 Rows=70
 ### 1366x768
 X=639
-Rows=50
+Rows=45
