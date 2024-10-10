@@ -22,7 +22,7 @@ alias gitui='gitk --date-order --all'
 alias dev='cd /c/Development'
 alias cpp='dev && cd CPP_Projects'
 alias net='dev && cd NET_Projects'
-if [ ${COMPUTERNAME} = B10FINW043E ] || [ ${COMPUTERNAME} = B10FINW0982 ]; then
+if [ ${COMPUTERNAME} = B11FINW0A82 ]; then
   alias pdg='dev && cd PDG_Projects'
   alias ql='dev && cd QL_Projects'
   alias pl='pdg && cd pdglib_devel/pdglib'
