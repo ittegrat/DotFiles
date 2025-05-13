@@ -19,6 +19,9 @@ git rebase -r [--root] --exec "git commit --amend --no-edit --reset-author" <has
 git for-each-ref refs/tags
 <br>tag --> Annotated / commit --> light
 
+### Commit from tag
+git rev-list -n 1 `tag`
+
 ### Debugging
 see also [Environment Variables](https://git-scm.com/book/en/v2/Git-Internals-Environment-Variables)
  - ssh connection: GIT_SSH_COMMAND="ssh -v" git ...

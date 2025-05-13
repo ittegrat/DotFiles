@@ -9,7 +9,7 @@ else
   PS1='\[\033]0;PortableGit\007\]'      # Terminal title bar
 fi
 PS1="$PS1"'\[\033[1;34m\][${SHLVL}]'               # Shell level in Cyan
-PS1="$PS1"'\[\033[0;33m\]`__git_ps1 | cut -c 2-`'  # Git Prompt in Brown
+PS1="$PS1"'\[\033[0;33m\]`__git_ps1 "(%s)"`'       # Git Prompt in Brown
 PS1="$PS1"'\[\033[1;32m\]:\w# '                    # current working directory and prompt (always #) in Light Green
 export PS1                                         # Export prompt definition in sub-shells
 
