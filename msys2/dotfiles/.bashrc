@@ -1,15 +1,15 @@
 # Sourcing the system-wide bashrc file
-test -e /etc/bashrc && . /etc/bashrc
+test -f /etc/bashrc && . /etc/bashrc
 
 # non-printable characters must be enclosed inside \[ and \]
 if [ -n "${VCINSTALLDIR}" ] ; then
-  PS1='\[\033]0;${PDG_COMPILER_VERSION}@${PDG_ADDRESS_MODEL} [${PDG_COMPILER_TYPE} ${PDG_TARGET_TYPE}]\007\]'  # Terminal title bar
+  PS1='\[\033]0;$(__tbar_ps1 ${PDG_COMPILER_VERSION}@${PDG_ADDRESS_MODEL})\007\]'  # Terminal title bar
   PS1="$PS1"'\[\033[0;33m\][${PDG_COMPILER_TYPE} ${PDG_TARGET_TYPE}]'  # Compiler & Target in Brown
 else
-  PS1='\[\033]0;PortableGit\007\]'      # Terminal title bar
+  PS1='\[\033]0;$(__tbar_ps1 PortableGit)\007\]'      # Terminal title bar
 fi
 PS1="$PS1"'\[\033[1;34m\][${SHLVL}]'               # Shell level in Cyan
-PS1="$PS1"'\[\033[0;33m\]`__git_ps1 "(%s)"`'       # Git Prompt in Brown
+PS1="$PS1"'\[\033[0;33m\]$(__git_ps1 "(%s)")'       # Git Prompt in Brown
 PS1="$PS1"'\[\033[1;32m\]:\w# '                    # current working directory and prompt (always #) in Light Green
 export PS1                                         # Export prompt definition in sub-shells
 
@@ -64,4 +64,13 @@ function proxyoff() {
 
   echo -e "Proxy-related environment variables removed."
   env | grep -e _PROXY -e GIT_ | sort
+}
+
+function __tbar_ps1() {
+  local gitstr=$(__git_ps1 "%s")
+  if [ -n "${gitstr}" ]; then
+    printf "%s (%s)" $(basename "$(git rev-parse --show-toplevel)") ${gitstr}
+  else
+    printf "%s" "$1"
+  fi
 }

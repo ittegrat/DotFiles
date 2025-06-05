@@ -1,5 +1,5 @@
 # sourcing ~/.bashrc
-if [ -e ${HOME}/.bashrc ] ; then
+if [ -f ${HOME}/.bashrc ] ; then
   export BASH_ENV=${HOME}/.bashrc
   . ${HOME}/.bashrc
 fi

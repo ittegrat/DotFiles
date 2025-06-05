@@ -5,8 +5,10 @@
 	safecrlf = true
 [alias]
 	alias = config --get-regexp '^alias\\.'
+	gerrit = push origin HEAD:refs/for/master
 	github = !(git config user.name ittegrat && git config user.email ittegrat@users.noreply.github.com)
 	meld = merge --no-commit --no-ff
+	one = log --oneline -15
 	tree = log -20 --oneline --all --graph --decorate
 	wdiff = difftool -y -x C:/Programs/WinMerge/WinMergeU
 [pull]
