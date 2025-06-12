@@ -35,35 +35,20 @@ if [ -n "${VCINSTALLDIR}" ] ; then
 fi
 
 function proxyon() {
-
-  if [ -z "$1" ] ; then
-    proxy_host=localhost
-  else
-    proxy_host=$1
-  fi
-  if [ -z "$2" ] ; then
-    proxy_port=8998
-  else
-    proxy_port=$2
-  fi
-
+  proxy_host=${1:-localhost}
+  proxy_port=${2:-8998}
   export HTTP_PROXY="http://${proxy_host}:${proxy_port}"
   export HTTPS_PROXY=${HTTP_PROXY} FTP_PROXY=${HTTP_PROXY}
-
   # optional for debugging
   #export GIT_CURL_VERBOSE=1
-
   echo -e "Proxy-related environment variables set:"
-  env | grep -e _PROXY -e GIT_ | sort
+  env | grep -e proxy -e PROXY -e GIT_ | sort
 }
-
 function proxyoff() {
-  variables=("HTTP_PROXY" "HTTPS_PROXY" "FTP_PROXY")
-
-  for i in "${variables[@]}"; do unset $i; done
-
+  local vars=(http_proxy https_proxy ftp_proxy)
+  for v in ${vars[@]}; do unset $v; unset ${v^^}; done
   echo -e "Proxy-related environment variables removed."
-  env | grep -e _PROXY -e GIT_ | sort
+  env | grep -e proxy -e PROXY -e GIT_ | sort
 }
 
 function __tbar_ps1() {
